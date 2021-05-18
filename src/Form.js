@@ -1,57 +1,79 @@
-import { Form, Col, Button } from "react-bootstrap";
+import {
+  Form,
+  Col,
+  Button,
+  Container,
+  Row,
+  Card,
+  ListGroup,
+  ListGroupItem,
+} from "react-bootstrap";
 const FormAd = () => {
   return (
     <div>
       <Form>
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-        </Form.Row>
-
-        <Form.Group controlId="formGridAddress1">
-          <Form.Label>Address</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
-        </Form.Group>
-
-        <Form.Group controlId="formGridAddress2">
-          <Form.Label>Address 2</Form.Label>
-          <Form.Control placeholder="Apartment, studio, or floor" />
-        </Form.Group>
-
-        <Form.Row>
-          <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>City</Form.Label>
-            <Form.Control />
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>State</Form.Label>
-            <Form.Control as="select" defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>...</option>
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridZip">
-            <Form.Label>Zip</Form.Label>
-            <Form.Control />
-          </Form.Group>
-        </Form.Row>
-
-        <Form.Group id="formGridCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <Container>
+          <div className="divunder">
+            <Row className="Form-Container">
+              <Col xs={11}>
+                <Form.Row>
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Control type="email" placeholder="first name" />
+                  </Form.Group>
+                  <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Control type="email" placeholder="last name" />
+                  </Form.Group>
+                </Form.Row>
+              </Col>
+            </Row>
+            <div style={{ width: "425px" }}>
+              <Row className="Form-Container">
+                <Form.Group controlId="formGridAddress1">
+                  <Form.Control placeholder="username                                                     @gmail.com" />
+                  <div style={{ marginBottom: "5px" }}>
+                    <Form.Text style={{ textAlign: "right" }}>
+                      you can use letters,numbers & periode
+                    </Form.Text>
+                  </div>
+                </Form.Group>
+              </Row>
+            </div>
+            <Row className="Form-Container">
+              <Col xs={9}>
+                <Form.Row>
+                  <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Control type="password" placeholder="Password     " />
+                  </Form.Group>
+                  <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Control type="password" placeholder="Confirm     " />
+                  </Form.Group>
+                  <div style={{ paddingTop: "-6px" }}>
+                    <Form.Text style={{ textAlign: "right" }}>
+                      Use 8 or more characters with a mix of letters, numbers &
+                      symbols
+                    </Form.Text>
+                  </div>
+                </Form.Row>
+              </Col>
+            </Row>
+            <div className="buttt">
+              <Button
+                variant="primary"
+                type="submit"
+                style={{
+                  backgroundColor: "white",
+                  color: "blue",
+                  border: "none",
+                }}
+              >
+                sign in instead
+              </Button>
+              <Button variant="primary" type="submit">
+                next
+              </Button>
+            </div>
+          </div>
+        </Container>
       </Form>
     </div>
   );
