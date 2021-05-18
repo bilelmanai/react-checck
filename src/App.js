@@ -10,10 +10,12 @@ import {
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Navbar";
+import FormAd from "./Form.js";
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <FormAd />
       <Breadcrumb>
         <Breadcrumb.Item>Home1</Breadcrumb.Item>
         <Breadcrumb.Item>Home2</Breadcrumb.Item>
